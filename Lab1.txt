@@ -1,0 +1,40 @@
+n = int(input("Ingrese un número de 3 dígitos"))
+
+if numero >= 100 and numero <= 999:
+
+    d0 = n // 100
+    d1 = (n // 10) % 10
+    d2 = n % 10
+
+    if d0 <= d1 and d0 <= d2:
+       menor = d0
+        if d1 <= d2:
+            medio = d1
+            mayor = d2
+        else:
+            medio = d2
+            mayor = d1
+
+    elif d1 <= d0 and d1 <= d2:
+        menor = d1
+        if d0 <= d2:
+            medio = d0
+            mayor = d2
+        else:
+            medio = d2
+            mayor = d0
+
+    else:
+        menor = d2
+        if d0 <= d1:
+            medio = d0
+            mayor = d1
+        else:
+            medio = d1
+            mayor = d0
+
+    print("Ascendente:", menor, medio, mayor)
+    print("Descendente:", mayor, medio, menor)
+
+else:
+    print("Número no válido. Debe tener exactamente 3 dígitos.")

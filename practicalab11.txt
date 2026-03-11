@@ -1,0 +1,46 @@
+#for i in range(5):
+ #    print(1)
+
+#for i in range(-2,60):
+ #    print(i)
+#for i in range(0,20,2):
+ #    print(i)
+ 
+ 
+#4. Contar hacia atrás
+#for i in range(10,0,-1):
+ #    print(i)
+
+#for i in range(55):
+ #   print(i,".","URL")
+    
+#contador=0
+#buscar="a"
+#for letra in "murcielagoabc123tuissv":
+  #  if letra==buscar
+#contador=contador+1
+#print("Se encontraron:", contador, "veces la letra:". buscar)
+
+#suma=0
+#for i in range(1,10000)
+
+#print(suma)
+
+#for i in range(1,11):
+#    print("5 *", i, "=", 5*i)
+    
+#Contar cuantos números múltiplos de 3 hay del 1 al 50
+#contador=0
+#for i in range(1,50,3):
+ #   if i % 3==0:
+  #      contador=contador+1
+#print("Los números del 3 son múltiplos", contador)
+
+#for i in range(6,1,-1):
+#    print("*"*i)
+
+tamaño=5
+for i in range(tamaño):
+    for j in range(tamaño):
+        print("*", end="")
+    print("*")

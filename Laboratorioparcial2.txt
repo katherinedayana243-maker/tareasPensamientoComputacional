@@ -1,0 +1,51 @@
+#def rellenar_multiplos(tamaño, base):
+ #   arreglo=[]
+ #   for i in range(1, tamaño + 1):
+ #       arreglo.append(base * i )
+ #   return arreglo
+
+#t=int(input("Tamaño del arreglo: "))
+#b=int(input("Numero base: "))
+
+#resultado=rellenar_multiplos(t, b)
+#print(f"contenido del arreglo: {resultado}")
+
+
+
+#n=int(input("Cuantos nombres ingresarás: "))
+
+#nombres=[]
+#longitudes=[]
+
+#for i in range(n):
+ #   nom=input(f"Ingrese el nombre {i+1}: ")
+ #  nombres.append(nom)
+ #   longitudes.append(len(nom)) 
+    
+#print("nombres:", nombres)
+#print("longitudes:", longitudes)
+
+
+#n = int(input("Cantidad de clientes atendidos: "))
+#evaluaciones = []
+
+#for i in range(n):
+ #   nota = int(input(f"Cliente {i+1} - Evaluación (1 al 5): "))
+ #   evaluaciones.append(nota)
+
+#print("\n--- Tabulación ---")
+#opciones = {5: "Excelente", 4: "Muy Buena", 3: "Buena", 2: "Regular", 1: "Malo"}
+
+#for valor, nombre in opciones.items():
+ #   total = evaluaciones.count(valor)
+ #   print(f"{nombre}: {total}")
+
+#mas_frecuente = max(set(evaluaciones), key=evaluaciones.count)
+#print(f"Más frecuente: {mas_frecuente}")
+
+#promedio = sum(evaluaciones) / n
+#menores = [res for res in evaluaciones if res < promedio]
+#porcentaje_menor = (len(menores) / n) * 100
+
+#print(f"Promedio: {promedio:.2f}")
+#print(f"Porcentaje menor al promedio: {porcentaje_menor:.1f}%")

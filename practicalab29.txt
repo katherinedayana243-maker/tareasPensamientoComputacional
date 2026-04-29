@@ -1,0 +1,89 @@
+tabla=[
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ]
+    
+print(tabla)
+
+print(tabla[0][0])
+print(tabla[1][2]-tabla[1][1])
+
+for i in tabla:
+    for j in i:
+        if j==6:
+            break
+        print(j)
+
+
+#----LLENAR MATRICES----
+matriz=[]
+size_row=int(input("Ingrese tamao de fila: "))
+size_column=int(input("Ingrese tamaño de columna: "))
+
+
+for f in range(size_row):
+    fila=[]
+    for c in range(size_column):
+        dato=int(input("Ingrese datos: "))
+        fila.append(dato)
+    matriz.append(fila)
+print(matriz)
+
+
+A=[ [2,3],
+    [4,5]]
+B=[ [5,4],
+    [6,8]]
+suma=[[0,0],[0,0]]
+
+for i in range(len(A)):
+    for j in range(len(A[0])):
+        suma[i][j]=A[i][j]+B[i][j]
+print(suma)
+
+Ejercicio 
+
+
+filas = int(input("Cuántas filas quieres: "))
+columnas = int(input("Cuántas columnas quieres: "))
+
+
+print("\nIngresa los datos de la Matriz 1:")
+matriz1 = []
+for i in range(filas):
+    fila = []
+    for j in range(columnas):
+        n = int(input(f"Posicion [{i}][{j}]: "))
+        fila.append(n)
+    matriz1.append(fila)
+
+
+print("\nIngresa los datos de la Matriz 2:")
+matriz2 = []
+for i in range(filas):
+    fila = []
+    for j in range(columnas):
+        n = int(input(f"Posicion [{i}][{j}]: "))
+        fila.append(n)
+    matriz2.append(fila)
+
+
+def restar(m1, m2):
+    resultado = []
+    for i in range(filas):
+        fila_nueva = []
+        for j in range(columnas):
+            # Restamos los números uno por uno
+            resta = m1[i][j] - m2[i][j]
+            fila_nueva.append(resta)
+        resultado.append(fila_nueva)
+    return resultado
+
+
+matriz_final = restar(matriz1, matriz2)
+
+print("\nLa resta de las matrices es:")
+for fila in matriz_final:
+    print(fila)
+

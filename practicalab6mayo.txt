@@ -1,0 +1,78 @@
+ejercicio 1
+
+matriz=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+suma_filas=[0,0,0]
+suma_columnas=[0,0,0]
+
+for i in range(3):
+    for j in range(3):
+        
+        suma_filas[i] += matriz[i][j]
+
+        suma_columnas[j] += matriz[i][j]
+
+print("Matriz 3x3")
+for fila in matriz:
+    print(fila)
+    
+print("\n resultados")
+print(f"suma de cada fila: {suma_filas}" )
+print(f"suma de cada columna: {suma_columnas}" )
+
+
+ejercicio 2
+
+cuadrado = []
+print("introduce los números para tu cuadrado 3x3")
+for i in range(3):
+    fila = []
+    for j in range(3):
+        num = int(input(f"ingresa el número para la posición [{i}][{j}]: "))
+        fila.append(num)
+    cuadrado.append(fila)
+
+
+sumas_filas = [0, 0, 0]
+sumas_columnas = [0, 0, 0]
+suma_diagonal_principal = 0
+suma_diagonal_secundaria = 0
+
+for i in range(3):
+    for j in range(3):
+  
+        sumas_filas[i] += cuadrado[i][j]
+        sumas_columnas[j] += cuadrado[i][j]
+        
+        if i == j:
+            suma_diagonal_principal += cuadrado[i][j]
+   
+        if i + j == 2:
+            suma_diagonal_secundaria += cuadrado[i][j]
+
+constante = sumas_filas[0]
+
+es_magico = True
+
+todas_las_sumas = sumas_filas + sumas_columnas + [suma_diagonal_principal, suma_diagonal_secundaria]
+
+for suma in todas_las_sumas:
+    if suma != constante:
+        es_magico = False
+        break
+
+print("\nresultados de las sumas")
+print(f"filas:     {sumas_filas}")
+print(f"columnas:  {sumas_columnas}")
+print(f"diagonal principal:   {suma_diagonal_principal}")
+print(f"diagonal secundaria:  {suma_diagonal_secundaria}")
+
+print("\n ")
+if es_magico:
+    print(f"es un cuadrado mágico (Constante: {constante})")
+else:
+    print("no es un cuadrado mágico.")

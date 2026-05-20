@@ -1,0 +1,54 @@
+# 0. Inicialización (Necesaria para que los métodos funcionen)
+perfil_usuario = {
+    "usuario": "TechGuy", 
+    "rango": "Admin"
+}
+print("Diccionario inicial:", perfil_usuario)
+print("-" * 50)
+
+
+# SECCIÓN 1: INSERTAR DATOS
+
+
+# Método básico: Asignación directa
+perfil_usuario["antiguedad_meses"] = 12
+
+# Método avanzado: .setdefault() 
+# (Solo inserta si la clave NO existe previamente, protegiendo datos existentes)
+perfil_usuario.setdefault("pais", "España")
+
+print("Diccionario tras insertar:", perfil_usuario)
+# Resultado: {'usuario': 'TechGuy', 'rango': 'Admin', 'antiguedad_meses': 12, 'pais': 'España'}
+print("-" * 50)
+
+# SECCIÓN 2: MODIFICAR DATOS
+
+# Método básico: Sobrescribir una clave existente
+perfil_usuario["rango"] = "SuperAdmin"
+
+# Método avanzado: .update()
+# (Permite modificar o insertar múltiples datos al mismo tiempo)
+perfil_usuario.update({"antiguedad_meses": 14, "estado": "Activo"})
+
+print("Diccionario tras modificar:", perfil_usuario)
+# Resultado: {'usuario': 'TechGuy', 'rango': 'SuperAdmin', 'antiguedad_meses': 14, 'pais': 'España', 'estado': 'Activo'}
+print("-" * 50)
+
+# SECCIÓN 3: ELIMINAR DATOS
+
+# Método básico: Palabra clave 'del' (Borra directamente de la memoria)
+del perfil_usuario["pais"]
+
+# Método avanzado: .pop()
+# (Borra el elemento pero te devuelve su valor para poder guardarlo en otra variable)
+estado_eliminado = perfil_usuario.pop("estado")
+
+# Método de limpieza: .clear()
+# (Elimina absolutamente todo el contenido del diccionario de golpe)
+# perfil_usuario.clear() -> Esto lo dejaría así: {}
+
+print("Diccionario tras eliminar:", perfil_usuario)
+print("Valor recuperado del pop:", estado_eliminado)
+
+# Resultado final del diccionario: {'usuario': 'TechGuy', 'rango': 'SuperAdmin', 'antiguedad_meses': 14}
+# Resultado de la variable recuperada: 'Activo'
